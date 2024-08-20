@@ -1,3 +1,4 @@
+import { type LinksFunction, type MetaFunction } from '@remix-run/node'
 import {
   Links,
   Meta,
@@ -6,7 +7,6 @@ import {
   ScrollRestoration,
 } from '@remix-run/react'
 import '~/styles/global.css'
-import { LinksFunction, MetaFunction } from '@remix-run/node'
 import faviconAssetUrl from '~/assets/favicon.svg'
 
 export const links: LinksFunction = () => [
