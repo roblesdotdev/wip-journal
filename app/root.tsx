@@ -5,7 +5,24 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import "./tailwind.css";
+import "~/styles/global.css";
+import { LinksFunction, MetaFunction } from "@remix-run/node";
+import faviconAssetUrl from "~/assets/favicon.svg";
+
+export const links: LinksFunction = () => [
+  { rel: "icon", type: "image+svg", href: faviconAssetUrl },
+];
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "WIP Journal" },
+    {
+      name: "description",
+      content:
+        "Your space for recording and reflecting on your project progress.",
+    },
+  ];
+};
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
